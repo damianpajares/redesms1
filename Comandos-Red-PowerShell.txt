@@ -1,2 +1,11 @@
+# Comando para ver la configuración de red InterfaceAlias y ifIndex
+Get-NetIPConfiguration
+
 # Comando de ejemplo para asignar una IP estática
-New-NetIPAddress -InterfaceIndex <ifIndex> -IPAddress 192.168.1.100 -PrefixLength 24
+#New-NetIPAddress -InterfaceIndex <ifIndex> -IPAddress 192.168.1.100 -PrefixLength 24
+
+
+New-NetIPAddress -InterfaceAlias Wi-Fi -IPAddress 192.168.1.220 -PrefixLength 24
+#Get-History: Muestra el historial de comandos de la sesión actual. Puedes usar su alias, h, para ejecutarlo.
+
+Get-History | Export-Csv -Path "powershell-historial.csv".
